@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  web:
+    #Nom du container
+    container_name: container-web
+
+    #on utilise une image php
+    image: php:8.3.3-apache
+
+    #volumes (on partage les dossiers entre la machine hote et le container)
+    volumes:
+      - ./app/:/var/www/html/
